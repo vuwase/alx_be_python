@@ -16,12 +16,9 @@ match priority:
     case _:
         base_text = f"'{task}' has an unspecified priority"
 
-# Check if task is time-bound
+# Check if task is time-bound and print directly
 if time_bound == "yes":
-    reminder = f"Reminder: {base_text} that requires immediate attention today!"
+    print(f"Reminder: {base_text} that requires immediate attention today!")
 else:
-    reminder = f"Note: {base_text}. Consider completing it when you have free time."
-
-# Display reminder
-print(reminder)
+    print(f"Note: {base_text}. Consider completing it when you have free time.")
 
